@@ -1,24 +1,30 @@
 {
-  "name": "first-app",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
   "dependencies": {
+    "next": "14.2.1",
     "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.1"
+    "react-dom": "^18"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@it-incubator/eslint-config": "^1.0.2",
+    "@it-incubator/prettier-config": "^0.1.2",
+    "@it-incubator/stylelint-config": "^1.0.3",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
-    "eslint-config-next": "14.2.1"
-  }
+    "eslint-config-next": "14.2.1",
+    "sass": "^1.75.0",
+    "stylelint": "^16.3.1",
+    "typescript": "^5"
+  },
+  "name": "first-app",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "format": "prettier --write ./",
+    "lint": "eslint src --ext .jsx,.js,.tsx,.ts  --no-error-on-unmatched-pattern --fix && stylelint --fix src/{,*/}*.{scss,css} --allow-empty-input",
+    "start": "next start"
+  },
+  "version": "0.1.0"
 }
