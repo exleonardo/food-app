@@ -1,5 +1,6 @@
 import logoImg from '@/assets/logo.png'
 import { MainHeaderBackground } from '@/components/main-header-background'
+import { NavLink } from '@/components/nav-link'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -17,11 +18,11 @@ export const MainHeader = () => {
         <nav className={s.nav}>
           <ul>
             <li>
-              <Link href={'/meals'}>Browse Meals</Link>
+              <NavLink href={'/meals'}>Browse Meals</NavLink>
             </li>
 
             <li>
-              <Link href={'/community'}>Foodies Community</Link>
+              <NavLink href={'/community'}> Foodies Community</NavLink>
             </li>
           </ul>
         </nav>
