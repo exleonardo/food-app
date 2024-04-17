@@ -1,7 +1,6 @@
 import { PropsWithChildren } from 'react'
 
 import { MainHeader } from '@/components/main-header'
-import { MainHeaderBackground } from '@/components/main-header-background'
 import { Metadata, NextPage } from 'next'
 
 import './globals.scss'
