@@ -1,3 +1,6 @@
+import { ImagePicker } from '@/components/image-picker'
+import { shareMeal } from '@/lib/actions'
+
 import s from './page.module.scss'
 
 export default function ShareMealPage() {
@@ -10,7 +13,7 @@ export default function ShareMealPage() {
         <p>Or any other meal you feel needs sharing!</p>
       </header>
       <main className={s.main}>
-        <form className={s.form}>
+        <form action={shareMeal} className={s.form}>
           <div className={s.row}>
             <p>
               <label htmlFor={'name'}>Your name</label>
@@ -33,7 +36,7 @@ export default function ShareMealPage() {
             <label htmlFor={'instructions'}>Instructions</label>
             <textarea id={'instructions'} name={'instructions'} required rows={10}></textarea>
           </p>
-          IMAGE PICKER
+          <ImagePicker label={'Your image'} name={'image'} />
           <p className={s.actions}>
             <button type={'submit'}>Share Meal</button>
           </p>
