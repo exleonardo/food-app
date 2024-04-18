@@ -7,6 +7,20 @@ import s from './page.module.scss'
 type MealDetailsPageType = {
   params: { mealSlug: string }
 }
+
+export async function generateMetadata({ params }: MealDetailsPageType) {
+  const meal = getMeal(params.mealSlug)
+
+  if (!meal) {
+    notFound()
+  }
+
+  return {
+    description: meal.summary,
+    title: meal.title,
+  }
+}
+
 export default function MealDetailsPage({ params }: MealDetailsPageType) {
   const meal = getMeal(params.mealSlug)
 
