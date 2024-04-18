@@ -2,10 +2,15 @@ import { Suspense } from 'react'
 
 import { MealsGrid } from '@/components/meals'
 import { getMeals } from '@/lib/meals'
+import { Metadata } from 'next'
 import Link from 'next/link'
 
 import s from './page.module.scss'
 
+export const metadata: Metadata = {
+  description: 'Browse the delicious meals shared by our vidrant community',
+  title: 'All Meals',
+}
 const Meals = async () => {
   const meals = await getMeals()
 
